@@ -1,0 +1,30 @@
+<apex:page cache="false" docType="html-5.0" showHeader="false" standardStylesheets="false">
+
+    <!-- デプロイ時は静的リソースのURLに置換する -->
+    <apex:stylesheet value="//cdn.jsdelivr.net/semantic-ui/latest/semantic.min.css" />
+    <apex:includeScript value="//cdn.jsdelivr.net/jquery/latest/jquery.min.js" />
+    <apex:includeScript value="//cdn.jsdelivr.net/semantic-ui/latest/semantic.min.js" />
+    <apex:includeScript value="//cdn.jsdelivr.net/vue/latest/vue.min.js" />
+
+    <style type="text/css">
+
+    </style>
+
+    <div id="app"></div>
+
+    <!-- VFのコンパイラを通すため、テンプレートはここに書く -->
+    <script id="app-template" type="text/template">
+        <div id="app">
+        </div>
+    </script>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            template: '#app-template',
+            data: {
+            }
+        });
+    </script>
+
+</apex:page>
